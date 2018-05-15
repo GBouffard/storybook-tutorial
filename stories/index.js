@@ -1,5 +1,6 @@
 import React from 'react';
 import { storiesOf, action, linkTo } from '@kadira/storybook';
+import { text, select } from '@kadira/storybook-addon-knobs';
 import Button from './Button';
 import Welcome from './Welcome';
 import Name from './Name';
@@ -30,21 +31,18 @@ storiesOf('Button', module)
     </Button>
   ));
 
+const types = {
+  '': '',
+  highlight: 'highlight',
+  disabled: 'disabled'
+};
+
 storiesOf('Components', module)
   .add('Name', () => (
     <div>
       <h2>Normal</h2>
       <Name
-        name="Guillaume" />
-
-      <h2>Highlighted</h2>
-      <Name
-        name="Guillaume"
-        type="highlight" />
-
-      <h2>Disabled</h2>
-      <Name
-        name="Guillaume"
-        type="disabled" />
+        name={text('Name', 'Guillaume')}
+        type={select('Type', types)} />
     </div>
-  ))
+  ));

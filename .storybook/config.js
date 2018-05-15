@@ -1,4 +1,8 @@
-import { configure } from '@kadira/storybook';
+import { configure, addDecorator } from '@kadira/storybook';
+import { withKnobs } from '@kadira/storybook-addon-knobs';
+import React from 'react';
+
+addDecorator(withKnobs);
 
 function loadStories() {
   require('../stories');
