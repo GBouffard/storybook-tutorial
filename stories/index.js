@@ -17,6 +17,12 @@ storiesOf('Button', module)
       Hello Button
     </Button>
   ))
+  .add('with link', () => (
+    <Button
+      onClick={linkTo('Components', 'Name')}>
+      Go to Name
+    </Button>
+  ))
   .add('with some emoji', () => (
     <Button
       onClick={action('clicked')}>
