@@ -38,11 +38,15 @@ const types = {
 };
 
 storiesOf('Components', module)
-  .add('Name', () => (
-    <div>
-      <h2>Normal</h2>
+  .addWithInfo(
+    'Name with info', 
+    `
+    A component to display a colored name tag.
+    `,
+    () =>  (
       <Name
         name={text('Name', 'Guillaume')}
         type={select('Type', types)} />
-    </div>
-  ));
+    ),
+    { inline: true }
+  );
