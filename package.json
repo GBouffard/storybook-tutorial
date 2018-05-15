@@ -16,6 +16,7 @@
     "build-storybook": "build-storybook"
   },
   "devDependencies": {
+    "@kadira/react-storybook-addon-info": "^3.4.0",
     "@kadira/storybook": "^2.21.0",
     "@kadira/storybook-addon-knobs": "^1.7.1",
     "getstorybook": "^1.7.0"
